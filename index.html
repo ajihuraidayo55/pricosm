@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>პრიკოსმის დამოუკიდებელი სახელმწიფო - ოფიციალური პორტალი</title>
+    <style>
+        /* Base Styling & Color Palette */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #1f2937;
+            line-height: 1.7;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #111827;
+            color: #ffffff;
+            border-bottom: 4px solid #b91c1c;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #e5e7eb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #f3f4f6;
+            text-decoration: underline;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.85)), radial-gradient(circle, #b91c1c 10%, #111827 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #d1d5db;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Main Content Grid */
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2.5rem;
+        }
+
+        section {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 2rem;
+            border-left: 5px solid #111827;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: #111827;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: #b91c1c;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #374151;
+            text-align: justify;
+        }
+
+        /* Info Table */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .info-table th, .info-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #e5e7eb;
+            text-align: left;
+        }
+
+        .info-table th {
+            background-color: #f3f4f6;
+            color: #111827;
+            font-weight: 600;
+            width: 35%;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-card {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #b91c1c;
+        }
+
+        .sidebar-card h3 {
+            margin-top: 0;
+            color: #111827;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            margin-top: 5rem;
+            border-top: 4px solid #b91c1c;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ნავიგაცია (Navigation) -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">პრიკოსმი</div>
+            <ul class="nav-links">
+                <li><a href="#about">სახელმწიფო</a></li>
+                <li><a href="#history">ისტორია</a></li>
+                <li><a href="#structure">სტრუქტურა</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ჰერო ბანერი (Hero Section) -->
+    <section class="hero">
+        <h1>პრიკოსმის დამოუკიდებელი სახელმწიფო</h1>
+        <p>ოფიციალური სამთავრობო საინფორმაციო პორტალი. სუვერენიტეტი, წესრიგი და პროგრესი.</p>
+    </section>
+
+    <!-- მთავარი კონტენტი (Main Content) -->
+    <div class="container">
+        
+        <main>
+            <!-- სახელმწიფო მიმოხილვა (About) -->
+            <section id="about">
+                <h2>ზოგადი ინფორმაცია</h2>
+                <p>პრიკოსმის დამოუკიდებელი სახელმწიფო არის სუვერენული ერთეული, რომელიც დაფუძნებულია უნიკალურ გეოგრაფიულ, კულტურულ და ადმინისტრაციულ პრინციპებზე. ქვეყანა უზრუნველყოფს თავისი მოქალაქეების უსაფრთხოებას, კეთილდღეობასა და დამოუკიდებელ განვითარებას.</p>
+                
+                <h3>კონსტიტუციური საფუძვლები</h3>
+                <p>სახელმწიფო მმართველობა ხორციელდება უზენაესი კანონმდებლობის შესაბამისად, რომელიც იცავს ინდივიდუალურ თავისუფლებას და ხელს უწყობს ეროვნული იდენტობის შენარჩუნებას გლობალურ სამყაროში.</p>
+            </section>
+
+            <!-- ისტორია (History) -->
+            <section id="history">
+                <h2>ისტორია და დაარსება</h2>
+                <p>სახელმწიფოს დაარსება უკავშირდება დამოუკიდებლობისა და თვითგამორკვევის იდეას. ხანგრძლივი მოსამზადებელი პერიოდის შემდეგ, ჩამოყალიბდა მყარი ადმინისტრაციული სტრუქტურა, რომელმაც საფუძველი ჩაუყარა თანამედროვე პრიკოსმის სახელმწიფოებრიობას.</p>
+                <p>ჩვენი ისტორია არის უწყვეტი ბრძოლა ინოვაციების, კულტურული თვითმყოფადობისა და სამართლებრივი წესრიგის დასამკვიდრებლად, რაც ასახულია თითოეული მოქალაქის ყოველდღიურ ცხოვრებაში.</p>
+            </section>
+
+            <!-- სტრუქტურა (Structure) -->
+            <section id="structure">
+                <h2>სახელმწიფო მოწყობა და ადმინისტრაცია</h2>
+                <p>ადმინისტრაციული აპარატი დაყოფილია სპეციალიზებულ უწყებებად, რომლებიც პასუხისმგებელნი არიან შიდა წესრიგზე, ეკონომიკურ განვითარებასა და საგარეო ურთიერთობებზე. სისტემა ორიენტირებულია მაქსიმალურ ეფექტურობასა და გამჭვირვალობაზე.</p>
+                
+                <table class="info-table">
+                    <tr>
+                        <th>მმართველობის ფორმა</th>
+                        <td>დამოუკიდებელი რესპუბლიკა</td>
+                    </tr>
+                    <tr>
+                        <th>სახელმწიფო ენა</th>
+                        <td>გულსიური ენა (ქართული)</td>
+                    </tr>
+                    <tr>
+                        <th>ოფიციალური ვალუტა</th>
+                        <td>პრიკოსმული კრედიტი / ლოკალური ვალუტა</td>
+                    </tr>
+                    <tr>
+                        <th>დედაქალაქი</th>
+                        <td>ცენტრალური ადმინისტრაციული ოლქი</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+
+        <!-- გვერდითა პანელი (Sidebar) -->
+        <aside>
+            <div class="sidebar-card">
+                <h3>სახელმწიფო სიმბოლოები</h3>
+                <p>პრიკოსმის დროშა და გერბი გამოხატავს ერის ერთიანობას, სიძლიერესა და მომავლისკენ სწრაფვას.</p>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>ახალი ამბები</h3>
+                <p><strong>2026 წლის 15 ივლისი</strong><br>ოფიციალური სახელმწიფო პორტალის განახლებული ვერსია ამოქმედდა.</p>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- ფუტერი (Footer) -->
+    <footer>
+        <p>&copy; 2026 პრიკოსმის დამოუკიდებელი სახელმწიფო. ყველა უფლება დაცულია.</p>
+    </footer>
+
+</body>
+</html>

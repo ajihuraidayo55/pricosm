@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>პრიკოსმის დამოუკიდებელი სახელმწიფო - ოფიციალური პორტალი</title>
+    <title>პრიკოსმის დამოუკიდებელი სახელმწიფო - ოფიციალური სამთავრობო პორტალი</title>
     <style>
-        /* Base Styling & Color Palette */
+        /* Base Styling & International Authority Color Palette */
         * {
             margin: 0;
             padding: 0;
@@ -14,19 +14,31 @@
         }
 
         body {
-            background-color: #f4f6f9;
-            color: #1f2937;
+            background-color: #f8fafc;
+            color: #0f172a;
             line-height: 1.7;
+        }
+
+        /* Top Bar for International Relations */
+        .intl-bar {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 0.4rem 1rem;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         /* Header & Navigation */
         header {
-            background-color: #111827;
-            color: #ffffff;
-            border-bottom: 4px solid #b91c1c;
+            background-color: #ffffff;
+            color: #0f172a;
+            border-bottom: 3px solid #1e3a8a;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .nav-container {
@@ -35,14 +47,17 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 2rem;
+            padding: 1rem 2rem;
         }
 
         .logo {
-            font-size: 1.6rem;
-            font-weight: bold;
+            font-size: 1.5rem;
+            font-weight: 800;
             letter-spacing: 1px;
-            color: #ffffff;
+            color: #1e3a8a;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .nav-links {
@@ -52,36 +67,39 @@
         }
 
         .nav-links a {
-            color: #e5e7eb;
+            color: #334155;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 0.95rem;
             transition: color 0.2s;
         }
 
         .nav-links a:hover {
-            color: #f3f4f6;
-            text-decoration: underline;
+            color: #1e3a8a;
         }
 
         /* Hero Banner */
         .hero {
-            background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.85)), radial-gradient(circle, #b91c1c 10%, #111827 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
             color: white;
             text-align: center;
-            padding: 5rem 1rem;
+            padding: 6rem 1rem;
+            border-bottom: 5px solid #b91c1c;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.2rem;
+            margin-bottom: 1.2rem;
             font-weight: 700;
+            letter-spacing: 1px;
         }
 
         .hero p {
-            font-size: 1.25rem;
-            color: #d1d5db;
+            font-size: 1.3rem;
+            color: #93c5fd;
             max-width: 800px;
             margin: 0 auto;
+            font-weight: 300;
         }
 
         /* Main Content Grid */
@@ -91,35 +109,36 @@
             padding: 0 2rem;
             display: grid;
             grid-template-columns: 3fr 1fr;
-            gap: 2.5rem;
+            gap: 3rem;
         }
 
         section {
             background: #ffffff;
             padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
             margin-bottom: 2rem;
-            border-left: 5px solid #111827;
         }
 
-        h2 {
-            font-size: 1.75rem;
-            color: #111827;
+        .section-title {
+            font-size: 1.8rem;
+            color: #0f172a;
             margin-bottom: 1.5rem;
-            border-bottom: 2px solid #e5e7eb;
             padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3b82f6;
+            font-weight: 700;
         }
 
         h3 {
-            font-size: 1.25rem;
-            color: #b91c1c;
-            margin: 1.5rem 0 0.5rem 0;
+            font-size: 1.3rem;
+            color: #1e3a8a;
+            margin: 1.8rem 0 0.6rem 0;
+            font-weight: 600;
         }
 
         p {
-            margin-bottom: 1rem;
-            color: #374151;
+            margin-bottom: 1.2rem;
+            color: #334155;
             text-align: justify;
         }
 
@@ -127,19 +146,20 @@
         .info-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 1rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
         }
 
         .info-table th, .info-table td {
-            padding: 0.75rem;
-            border-bottom: 1px solid #e5e7eb;
-            text-align: left;
+            padding: 0.85rem 1rem;
+            border: 1px solid #e2e8f0;
         }
 
         .info-table th {
-            background-color: #f3f4f6;
-            color: #111827;
+            background-color: #f1f5f9;
+            color: #0f172a;
             font-weight: 600;
+            text-align: left;
             width: 35%;
         }
 
@@ -153,25 +173,30 @@
         .sidebar-card {
             background: #ffffff;
             padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            border-top: 4px solid #b91c1c;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            border-top: 4px solid #1e3a8a;
         }
 
         .sidebar-card h3 {
             margin-top: 0;
-            color: #111827;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
+            color: #0f172a;
+            font-size: 1.15rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .sidebar-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
         }
 
         /* Footer */
         footer {
-            background-color: #111827;
-            color: #9ca3af;
+            background-color: #0f172a;
+            color: #94a3b8;
             text-align: center;
-            padding: 2.5rem 1rem;
-            margin-top: 5rem;
+            padding: 3rem 1rem;
+            margin-top: 6rem;
             border-top: 4px solid #b91c1c;
             font-size: 0.9rem;
         }
@@ -180,20 +205,25 @@
             .container {
                 grid-template-columns: 1fr;
             }
-            .hero h1 { font-size: 2.2rem; }
+            .hero h1 { font-size: 2.4rem; }
         }
     </style>
 </head>
 <body>
+
+    <!-- საერთაშორისო სტატუსის ზოლი (International Status Bar) -->
+    <div class="intl-bar">
+        პრიკოსმის დამოუკიდებელი სახელმწიფო • გაეროს და საერთაშორისო თანამეგობრობის სრულუფლებიანი წევრი
+    </div>
 
     <!-- ნავიგაცია (Navigation) -->
     <header>
         <div class="nav-container">
             <div class="logo">პრიკოსმი</div>
             <ul class="nav-links">
-                <li><a href="#about">სახელმწიფო</a></li>
-                <li><a href="#history">ისტორია</a></li>
-                <li><a href="#structure">სტრუქტურა</a></li>
+                <li><a href="#sovereignty">სუვერენიტეტი</a></li>
+                <li><a href="#diplomacy">დიპლომატია</a></li>
+                <li><a href="#statutes">კანონმდებლობა</a></li>
             </ul>
         </div>
     </header>
@@ -201,50 +231,43 @@
     <!-- ჰერო ბანერი (Hero Section) -->
     <section class="hero">
         <h1>პრიკოსმის დამოუკიდებელი სახელმწიფო</h1>
-        <p>ოფიციალური სამთავრობო საინფორმაციო პორტალი. სუვერენიტეტი, წესრიგი და პროგრესი.</p>
+        <p>საერთაშორისო თანამეგობრობის მიერ აღიარებული სუვერენული რესპუბლიკა. მშვიდობა, თანამშრომლობა და პროგრესი.</p>
     </section>
 
     <!-- მთავარი კონტენტი (Main Content) -->
     <div class="container">
         
         <main>
-            <!-- სახელმწიფო მიმოხილვა (About) -->
-            <section id="about">
-                <h2>ზოგადი ინფორმაცია</h2>
-                <p>პრიკოსმის დამოუკიდებელი სახელმწიფო არის სუვერენული ერთეული, რომელიც დაფუძნებულია უნიკალურ გეოგრაფიულ, კულტურულ და ადმინისტრაციულ პრინციპებზე. ქვეყანა უზრუნველყოფს თავისი მოქალაქეების უსაფრთხოებას, კეთილდღეობასა და დამოუკიდებელ განვითარებას.</p>
+            <!-- სუვერენიტეტი და აღიარება (Sovereignty & Recognition) -->
+            <section id="sovereignty">
+                <h2 class="section-title">სახელმწიფო სუვერენიტეტი</h2>
+                <p>პრიკოსმის დამოუკიდებელი სახელმწიფო არის საერთაშორისო სამართლის სრულუფლებიანი სუბიექტი. ორმხრივი დიპლომატიური ხელშეკრულებებისა და საერთაშორისო აღიარების საფუძველზე, ჩვენი ქვეყანა ახორციელებს სრულ სუვერენიტეტს თავის ტერიტორიაზე და აქტიურად მონაწილეობს გლობალური უსაფრთხოების უზრუნველყოფაში.</p>
                 
-                <h3>კონსტიტუციური საფუძვლები</h3>
-                <p>სახელმწიფო მმართველობა ხორციელდება უზენაესი კანონმდებლობის შესაბამისად, რომელიც იცავს ინდივიდუალურ თავისუფლებას და ხელს უწყობს ეროვნული იდენტობის შენარჩუნებას გლობალურ სამყაროში.</p>
+                <h3>საგარეო პოლიტიკის პრინციპები</h3>
+                <p>ჩვენი საგარეო კურსი ეფუძნება მშვიდობიანი თანაარსებობის, ეროვნული ინტერესების დაცვისა და პარტნიორ ქვეყნებთან ეკონომიკური თუ კულტურული კავშირების გაძლიერების პრინციპებს.</p>
             </section>
 
-            <!-- ისტორია (History) -->
-            <section id="history">
-                <h2>ისტორია და დაარსება</h2>
-                <p>სახელმწიფოს დაარსება უკავშირდება დამოუკიდებლობისა და თვითგამორკვევის იდეას. ხანგრძლივი მოსამზადებელი პერიოდის შემდეგ, ჩამოყალიბდა მყარი ადმინისტრაციული სტრუქტურა, რომელმაც საფუძველი ჩაუყარა თანამედროვე პრიკოსმის სახელმწიფოებრიობას.</p>
-                <p>ჩვენი ისტორია არის უწყვეტი ბრძოლა ინოვაციების, კულტურული თვითმყოფადობისა და სამართლებრივი წესრიგის დასამკვიდრებლად, რაც ასახულია თითოეული მოქალაქის ყოველდღიურ ცხოვრებაში.</p>
-            </section>
-
-            <!-- სტრუქტურა (Structure) -->
-            <section id="structure">
-                <h2>სახელმწიფო მოწყობა და ადმინისტრაცია</h2>
-                <p>ადმინისტრაციული აპარატი დაყოფილია სპეციალიზებულ უწყებებად, რომლებიც პასუხისმგებელნი არიან შიდა წესრიგზე, ეკონომიკურ განვითარებასა და საგარეო ურთიერთობებზე. სისტემა ორიენტირებულია მაქსიმალურ ეფექტურობასა და გამჭვირვალობაზე.</p>
+            <!-- დიპლომატიური ურთიერთობები (Diplomacy) -->
+            <section id="diplomacy">
+                <h2 class="section-title">დიპლომატია და საერთაშორისო ხელშეკრულებები</h2>
+                <p>სახელმწიფო აქტიურად თანამშრომლობს მსოფლიოს წამყვან ქვეყნებთან. საგარეო საქმეთა სამინისტროს მიერ გაფორმებული ხელშეკრულებები ხელს უწყობს ღია სავაჭრო ურთიერთობებს, ვიზიტორთა ლეგალურ გადაადგილებას და ერთობლივ სამეცნიერო-ტექნოლოგიურ კვლევებს.</p>
                 
                 <table class="info-table">
                     <tr>
-                        <th>მმართველობის ფორმა</th>
-                        <td>დამოუკიდებელი რესპუბლიკა</td>
+                        <th>საერთაშორისო სტატუსი</th>
+                        <td>სრულად აღიარებული სუვერენული სახელმწიფო</td>
+                    </tr>
+                    <tr>
+                        <th>დიპლომატიური მისიები</th>
+                        <td>საელჩოები და საკონსულოები საზღვარგარეთ</td>
                     </tr>
                     <tr>
                         <th>სახელმწიფო ენა</th>
                         <td>გულსიური ენა (ქართული)</td>
                     </tr>
                     <tr>
-                        <th>ოფიციალური ვალუტა</th>
-                        <td>პრიკოსმული კრედიტი / ლოკალური ვალუტა</td>
-                    </tr>
-                    <tr>
-                        <th>დედაქალაქი</th>
-                        <td>ცენტრალური ადმინისტრაციული ოლქი</td>
+                        <th>ეროვნული ვალუტა</th>
+                        <td>პრიკოსმული სტანდარტული ვალუტა (საერთაშორისო კოდით)</td>
                     </tr>
                 </table>
             </section>
@@ -253,13 +276,13 @@
         <!-- გვერდითა პანელი (Sidebar) -->
         <aside>
             <div class="sidebar-card">
-                <h3>სახელმწიფო სიმბოლოები</h3>
-                <p>პრიკოსმის დროშა და გერბი გამოხატავს ერის ერთიანობას, სიძლიერესა და მომავლისკენ სწრაფვას.</p>
+                <h3>ოფიციალური განცხადება</h3>
+                <p>საგარეო საქმეთა სამინისტრო აქვეყნებს ახალ დირექტივებს საერთაშორისო პარტნიორებთან სავაჭრო მისიების გაფართოების შესახებ.</p>
             </div>
 
             <div class="sidebar-card">
-                <h3>ახალი ამბები</h3>
-                <p><strong>2026 წლის 15 ივლისი</strong><br>ოფიციალური სახელმწიფო პორტალის განახლებული ვერსია ამოქმედდა.</p>
+                <h3>სახელმწიფო ახალი ამბები</h3>
+                <p><strong>2026 წლის 15 ივლისი</strong><br>დასრულდა მოლაპარაკებების მორიგი რაუნდი საერთაშორისო ხელშეკრულებების რატიფიცირებასთან დაკავშირებით.</p>
             </div>
         </aside>
 
@@ -267,7 +290,7 @@
 
     <!-- ფუტერი (Footer) -->
     <footer>
-        <p>&copy; 2026 პრიკოსმის დამოუკიდებელი სახელმწიფო. ყველა უფლება დაცულია.</p>
+        <p>&copy; 2026 პრიკოსმის დამოუკიდებელი სახელმწიფო. ყველა სახელმწიფოებრივი უფლება დაცულია მთავრობის მიერ.</p>
     </footer>
 
 </body>

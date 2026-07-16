@@ -2,296 +2,218 @@
 <html lang="ka">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>პრიკოსმის დამოუკიდებელი სახელმწიფო - ოფიციალური სამთავრობო პორტალი</title>
+    <title>◆◆◆ პრიკოსმის დამოუკიდებელი სახელმწიფო - ოფიციალური საიტი ◆◆◆</title>
     <style>
-        /* Base Styling & International Authority Color Palette */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-        }
-
+        /* 2000年代のレトロなスタイル設定 */
         body {
-            background-color: #f8fafc;
-            color: #0f172a;
-            line-height: 1.7;
+            background-color: #000000;
+            background-image: url('https://www.transparenttextures.com/patterns/black-thread.png'); /* 畳やテクスチャ感のある背景 */
+            color: #00ff00; /* 定番の緑色フォント */
+            font-family: "MS PGothic", "Courier New", sans-serif;
+            font-size: 12px;
+            margin: 10px;
         }
 
-        /* Top Bar for International Relations */
-        .intl-bar {
-            background-color: #1e3a8a;
+        a {
+            color: #00ffff;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #ff00ff;
+            background-color: #333333;
+        }
+
+        /* 掲示板風のテーブル */
+        table {
+            border: 2px solid #00ff00;
+            background-color: #111111;
+        }
+
+        th {
+            background-color: #000080; /* Windowsのブルースクリーンや紺色ヘッダー */
             color: #ffffff;
-            font-size: 0.8rem;
-            text-align: center;
-            padding: 0.4rem 1rem;
-            letter-spacing: 0.5px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 5px;
+            font-size: 14px;
         }
 
-        /* Header & Navigation */
-        header {
-            background-color: #ffffff;
-            color: #0f172a;
-            border-bottom: 3px solid #1e3a8a;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        td {
+            padding: 8px;
+            border: 1px dashed #00ff00;
         }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
+        /* marqueeやblink風の再現（レトロ感を強調） */
+        .marquee-box {
+            border: 1px double #00ff00;
+            padding: 3px;
+            background-color: #050505;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            color: #1e3a8a;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+        .counter {
+            background-color: #222222;
+            color: #ff0000;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 2px 6px;
+            border: 1px solid #ff0000;
+            letter-spacing: 2px;
         }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
+        .kiri-ban {
+            color: #ffff00;
+            font-weight: bold;
         }
 
-        .nav-links a {
-            color: #334155;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: #1e3a8a;
-        }
-
-        /* Hero Banner */
-        .hero {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-            color: white;
-            text-align: center;
-            padding: 6rem 1rem;
-            border-bottom: 5px solid #b91c1c;
-        }
-
-        .hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 1.2rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            color: #93c5fd;
-            max-width: 800px;
-            margin: 0 auto;
-            font-weight: 300;
-        }
-
-        /* Main Content Grid */
-        .container {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 3rem;
-        }
-
-        section {
-            background: #ffffff;
-            padding: 2.5rem;
-            border-radius: 6px;
-            border: 1px solid #e2e8f0;
-            margin-bottom: 2rem;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            color: #0f172a;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #3b82f6;
-            font-weight: 700;
-        }
-
-        h3 {
-            font-size: 1.3rem;
-            color: #1e3a8a;
-            margin: 1.8rem 0 0.6rem 0;
-            font-weight: 600;
-        }
-
-        p {
-            margin-bottom: 1.2rem;
-            color: #334155;
-            text-align: justify;
-        }
-
-        /* Info Table */
-        .info-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
-            font-size: 0.95rem;
-        }
-
-        .info-table th, .info-table td {
-            padding: 0.85rem 1rem;
-            border: 1px solid #e2e8f0;
-        }
-
-        .info-table th {
-            background-color: #f1f5f9;
-            color: #0f172a;
-            font-weight: 600;
-            text-align: left;
-            width: 35%;
-        }
-
-        /* Sidebar */
-        aside {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .sidebar-card {
-            background: #ffffff;
-            padding: 1.5rem;
-            border-radius: 6px;
-            border: 1px solid #e2e8f0;
-            border-top: 4px solid #1e3a8a;
-        }
-
-        .sidebar-card h3 {
-            margin-top: 0;
-            color: #0f172a;
-            font-size: 1.15rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .sidebar-card p {
-            font-size: 0.9rem;
-            margin-bottom: 0;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #0f172a;
-            color: #94a3b8;
-            text-align: center;
-            padding: 3rem 1rem;
-            margin-top: 6rem;
-            border-top: 4px solid #b91c1c;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            .hero h1 { font-size: 2.4rem; }
+        /* 虹色のグラデーション線 */
+        .rainbow-line {
+            height: 3px;
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            margin: 15px 0;
+            border: none;
         }
     </style>
 </head>
 <body>
 
-    <!-- საერთაშორისო სტატუსის ზოლი (International Status Bar) -->
-    <div class="intl-bar">
-        პრიკოსმის დამოუკიდებელი სახელმწიფო • გაეროს და საერთაშორისო თანამეგობრობის სრულუფლებიანი წევრი
+<center>
+    <!-- 懐かしのキラキラ星や、当時の国章を模したアスキーアート風のプレースホルダー -->
+    <font size="6" color="#ffffff"><b>★ ვებ-გვერდი პრიკოსმი ★</b></font><br>
+    <font size="3" color="#ffff00"><b>მოგესალმებით პრიკოსმის დამოუკიდებელი სახელმწიფოს ოფიციალურ საიტზე!</b></font>
+    
+    <hr class="rainbow-line">
+
+    <!-- 流れる文字 (marquee) -->
+    <div class="marquee-box" style="width: 80%;">
+        <marquee scrollamount="3">
+            <font size="2" color="#00ffff">【სიახლე】 პრიკოსმის დამოუკიდებელი სახელმწიფო აღიარებულ იქნა საერთაშორისო თანამეგობრობის მიერ! კეთილი იყოს თქვენი მობრძანება ჩვენს პორტალზე!</font>
+        </marquee>
     </div>
 
-    <!-- ნავიგაცია (Navigation) -->
-    <header>
-        <div class="nav-container">
-            <div class="logo">პრიკოსმი</div>
-            <ul class="nav-links">
-                <li><a href="#sovereignty">სუვერენიტეტი</a></li>
-                <li><a href="#diplomacy">დიპლომატია</a></li>
-                <li><a href="#statutes">კანონმდებლობა</a></li>
-            </ul>
-        </div>
-    </header>
+    <br>
 
-    <!-- ჰერო ბანერი (Hero Section) -->
-    <section class="hero">
-        <h1>პრიკოსმის დამოუკიდებელი სახელმწიფო</h1>
-        <p>საერთაშორისო თანამეგობრობის მიერ აღიარებული სუვერენული რესპუბლიკა. მშვიდობა, თანამშრომლობა და პროგრესი.</p>
-    </section>
+    <!-- アクセスカウンターとキリ番のお願い -->
+    <table width="300" cellpadding="5" cellspacing="0">
+        <tr>
+            <td align="center" bgcolor="#000080">
+                <font color="#ffffff" size="2"><b>სტუმრების რაოდენობა</b></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <span class="counter">0001594</span><br>
+                <font size="1" color="#ffffff">
+                    ※ გთხოვთ, თუ შეხვალთ <span class="kiri-ban">#16000</span>-ზე, დატოვოთ შეტყობინება BBS-ზე!
+                </font>
+            </td>
+        </tr>
+    </table>
 
-    <!-- მთავარი კონტენტი (Main Content) -->
-    <div class="container">
-        
-        <main>
-            <!-- სუვერენიტეტი და აღიარება (Sovereignty & Recognition) -->
-            <section id="sovereignty">
-                <h2 class="section-title">სახელმწიფო სუვერენიტეტი</h2>
-                <p>პრიკოსმის დამოუკიდებელი სახელმწიფო არის საერთაშორისო სამართლის სრულუფლებიანი სუბიექტი. ორმხრივი დიპლომატიური ხელშეკრულებებისა და საერთაშორისო აღიარების საფუძველზე, ჩვენი ქვეყანა ახორციელებს სრულ სუვერენიტეტს თავის ტერიტორიაზე და აქტიურად მონაწილეობს გლობალური უსაფრთხოების უზრუნველყოფაში.</p>
-                
-                <h3>საგარეო პოლიტიკის პრინციპები</h3>
-                <p>ჩვენი საგარეო კურსი ეფუძნება მშვიდობიანი თანაარსებობის, ეროვნული ინტერესების დაცვისა და პარტნიორ ქვეყნებთან ეკონომიკური თუ კულტურული კავშირების გაძლიერების პრინციპებს.</p>
-            </section>
+    <br>
+    <hr class="rainbow-line">
 
-            <!-- დიპლომატიური ურთიერთობები (Diplomacy) -->
-            <section id="diplomacy">
-                <h2 class="section-title">დიპლომატია და საერთაშორისო ხელშეკრულებები</h2>
-                <p>სახელმწიფო აქტიურად თანამშრომლობს მსოფლიოს წამყვან ქვეყნებთან. საგარეო საქმეთა სამინისტროს მიერ გაფორმებული ხელშეკრულებები ხელს უწყობს ღია სავაჭრო ურთიერთობებს, ვიზიტორთა ლეგალურ გადაადგილებას და ერთობლივ სამეცნიერო-ტექნოლოგიურ კვლევებს.</p>
-                
-                <table class="info-table">
+    <!-- メインの2カラム風テーブル配置（当時の主流レイアウト） -->
+    <table width="750" border="0" cellpadding="10" cellspacing="0">
+        <tr>
+            <!-- 左メニュー -->
+            <td width="200" valign="top" bgcolor="#151515">
+                <font size="3" color="#ffff00"><b>მენიუ (Menu)</b></font><br><br>
+                ・<a href="#about">მთავარი (ჩვენს შესახებ)</a><br>
+                ・<a href="#history">ისტორია (History)</a><br>
+                ・<a href="#bbs">ფორუმი (BBS)</a><br>
+                ・<a href="#links">ბმულები (Links)</a><br>
+                <br>
+                <hr color="#00ff00">
+                <font size="1" color="#888888">
+                    საიტი ოპტიმიზებულია Internet Explorer 6.0-ისთვის.<br>
+                    რეზოლუცია: 800x600.
+                </font>
+            </td>
+
+            <!-- 右メインコンテンツ -->
+            <td width="550" valign="top">
+                <!-- 国家紹介 -->
+                <a name="about"></a>
+                <table width="100%" cellspacing="0">
                     <tr>
-                        <th>საერთაშორისო სტატუსი</th>
-                        <td>სრულად აღიარებული სუვერენული სახელმწიფო</td>
+                        <th>სუვერენული სახელმწიფო პრიკოსმი</th>
                     </tr>
                     <tr>
-                        <th>დიპლომატიური მისიები</th>
-                        <td>საელჩოები და საკონსულოები საზღვარგარეთ</td>
-                    </tr>
-                    <tr>
-                        <th>სახელმწიფო ენა</th>
-                        <td>გულსიური ენა (ქართული)</td>
-                    </tr>
-                    <tr>
-                        <th>ეროვნული ვალუტა</th>
-                        <td>პრიკოსმული სტანდარტული ვალუტა (საერთაშორისო კოდით)</td>
+                        <td>
+                            <font color="#ff00ff"><b>● სახელმწიფო იდეა ●</b></font><br>
+                            ჩვენი ქვეყანა არის სრულუფლებიანი სუვერენული რესპუბლიკა. ჩვენი მიზანია დავიცვათ წესრიგი, თავისუფლება და განვავითაროთ ჩვენი საკუთარი კულტურა და ტექნოლოგია.<br><br>
+                            <font color="#ff00ff"><b>● სახელმწიფო ენა ●</b></font><br>
+                            ოფიციალური სახელმწიფო ენა არის გულსიური ენა (ქართული). ყველა დოკუმენტი იწერება ამ ენაზე.
+                        </td>
                     </tr>
                 </table>
-            </section>
-        </main>
 
-        <!-- გვერდითა პანელი (Sidebar) -->
-        <aside>
-            <div class="sidebar-card">
-                <h3>ოფიციალური განცხადება</h3>
-                <p>საგარეო საქმეთა სამინისტრო აქვეყნებს ახალ დირექტივებს საერთაშორისო პარტნიორებთან სავაჭრო მისიების გაფართოების შესახებ.</p>
-            </div>
+                <br>
 
-            <div class="sidebar-card">
-                <h3>სახელმწიფო ახალი ამბები</h3>
-                <p><strong>2026 წლის 15 ივლისი</strong><br>დასრულდა მოლაპარაკებების მორიგი რაუნდი საერთაშორისო ხელშეკრულებების რატიფიცირებასთან დაკავშირებით.</p>
-            </div>
-        </aside>
+                <!-- 歴史 -->
+                <a name="history"></a>
+                <table width="100%" cellspacing="0">
+                    <tr>
+                        <th>სახელმწიფოს ისტორია</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            დიდი ძალისხმევისა და მოსამზადებელი პერიოდის შემდეგ, ჩვენმა ქვეყანამ მოიპოვა საერთაშორისო აღიარება. ეს საიტი შეიქმნა იმისათვის, რომ მსოფლიოს გავაცნოთ ჩვენი იდენტობა.
+                        </td>
+                    </tr>
+                </table>
 
-    </div>
+                <br>
 
-    <!-- ფუტერი (Footer) -->
-    <footer>
-        <p>&copy; 2026 პრიკოსმის დამოუკიდებელი სახელმწიფო. ყველა სახელმწიფოებრივი უფლება დაცულია მთავრობის მიერ.</p>
-    </footer>
+                <!-- 掲示板エリア（モック） -->
+                <a name="bbs"></a>
+                <table width="100%" cellspacing="0">
+                    <tr>
+                        <th>სტუმრების წიგნი (BBS)</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            აქ შეგიძლიათ დატოვოთ თქვენი აზრი ჩვენი ქვეყნის შესახებ!<br>
+                            <u>[დაწერე შეტყობინება]</u> (მშენებლობის პროცესშია...)
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <hr class="rainbow-line">
+
+    <!-- バナーエリア -->
+    <font size="2"><b>ბანერები (Links)</b></font><br>
+    <table border="0" cellpadding="5">
+        <tr>
+            <td>
+                <!-- 当時定番だった 88x31 サイズの相互リンク用バナー（枠線を蛍光グリーンで再現） -->
+                <div style="width:88px; height:31px; border:1px solid #00ff00; background:#000000; font-size:9px; text-align:center; line-height:31px;">
+                    <font color="#00ff00">PRICOSM Govt</font>
+                </div>
+            </td>
+            <td>
+                <div style="width:88px; height:31px; border:1px solid #00ff00; background:#000000; font-size:9px; text-align:center; line-height:31px;">
+                    <font color="#00ff00">BBS LINK</font>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <font size="1" color="#ffffff">※ ჩვენი საიტის ბანერი შეგიძლიათ თავისუფლად გამოიყენოთ (Direct Link-ი აკრძალულია!).</font>
+
+    <br><br>
+    <hr color="#00ff00" width="500">
+    <br>
+
+    <!-- フッター -->
+    <font size="1" color="#888888">
+        Copyright (C) 2000-2006 პრიკოსმის დამოუკიდებელი სახელმწიფო. All Rights Reserved.<br>
+        საიტის შექმნის თარიღი: 2006/07/16
+    </font>
+
+</center>
 
 </body>
 </html>

@@ -2,147 +2,174 @@
 <html lang="ka">
 <head>
     <meta charset="UTF-8">
-    <title>◆◆◆ პრიკოსმის დამოუკიდებელი სახელმწიფო - ოფიციალური საიტი ◆◆◆</title>
+    <title>პრიკოსმის დამოუკიდებელი სახელმწიფო - ოფიციალური საიტი</title>
     <style>
-        /* 2000年代のレトロなスタイル設定 */
+        /* 2000年代の典型的な役所・企業系スタイル */
         body {
-            background-color: #000000;
-            background-image: url('https://www.transparenttextures.com/patterns/black-thread.png'); /* 畳やテクスチャ感のある背景 */
-            color: #00ff00; /* 定番の緑色フォント */
-            font-family: "MS PGothic", "Courier New", sans-serif;
+            background-color: #ffffff; /* 白背景 */
+            color: #000000;
+            font-family: "MS PGothic", "MS Sans Serif", sans-serif;
             font-size: 12px;
-            margin: 10px;
+            margin: 0;
+            padding: 0;
         }
 
+        /* リンクの色も当時のデフォルトブルー */
         a {
-            color: #00ffff;
+            color: #0000ff;
             text-decoration: underline;
         }
+        a:visited {
+            color: #551a8b;
+        }
         a:hover {
-            color: #ff00ff;
-            background-color: #333333;
-        }
-
-        /* 掲示板風のテーブル */
-        table {
-            border: 2px solid #00ff00;
-            background-color: #111111;
-        }
-
-        th {
-            background-color: #000080; /* Windowsのブルースクリーンや紺色ヘッダー */
-            color: #ffffff;
-            padding: 5px;
-            font-size: 14px;
-        }
-
-        td {
-            padding: 8px;
-            border: 1px dashed #00ff00;
-        }
-
-        /* marqueeやblink風の再現（レトロ感を強調） */
-        .marquee-box {
-            border: 1px double #00ff00;
-            padding: 3px;
-            background-color: #050505;
-        }
-
-        .counter {
-            background-color: #222222;
             color: #ff0000;
-            font-family: 'Courier New', monospace;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 2px 6px;
-            border: 1px solid #ff0000;
-            letter-spacing: 2px;
         }
 
-        .kiri-ban {
-            color: #ffff00;
-            font-weight: bold;
+        /* テーブルによるガチガチのレイアウト */
+        .main-table {
+            border: 1px solid #999999;
+            background-color: #ffffff;
         }
 
-        /* 虹色のグラデーション線 */
-        .rainbow-line {
-            height: 3px;
-            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-            margin: 15px 0;
-            border: none;
+        /* ヘッダーの青いグラデーション風（当時よくあった単色ブルー） */
+        .header-bg {
+            background-color: #004080;
+            color: #ffffff;
+            padding: 15px;
+            text-align: left;
+        }
+
+        /* メニューの背景（薄いグレーか薄い青） */
+        .menu-bg {
+            background-color: #e6f2ff;
+            border-right: 1px solid #999999;
+            vertical-align: top;
+            padding: 10px;
+        }
+
+        /* ニュースなどの枠 */
+        .info-box {
+            border: 1px solid #004080;
+            background-color: #f0f8ff;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        /* 新着情報の「NEW」マーク */
+        .new-mark {
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+        /* アクセスカウンター（おなじみの緑液晶風） */
+        .counter-img {
+            background-color: #000000;
+            color: #00ff00;
+            font-family: monospace;
+            font-size: 14px;
+            padding: 2px 4px;
+            border: 1px solid #808080;
         }
     </style>
 </head>
 <body>
 
 <center>
-    <!-- 懐かしのキラキラ星や、当時の国章を模したアスキーアート風のプレースホルダー -->
-    <font size="6" color="#ffffff"><b>★ ვებ-გვერდი პრიკოსმი ★</b></font><br>
-    <font size="3" color="#ffff00"><b>მოგესალმებით პრიკოსმის დამოუკიდებელი სახელმწიფოს ოფიციალურ საიტზე!</b></font>
-    
-    <hr class="rainbow-line">
-
-    <!-- 流れる文字 (marquee) -->
-    <div class="marquee-box" style="width: 80%;">
-        <marquee scrollamount="3">
-            <font size="2" color="#00ffff">【სიახლე】 პრიკოსმის დამოუკიდებელი სახელმწიფო აღიარებულ იქნა საერთაშორისო თანამეგობრობის მიერ! კეთილი იყოს თქვენი მობრძანება ჩვენს პორტალზე!</font>
-        </marquee>
-    </div>
-
-    <br>
-
-    <!-- アクセスカウンターとキリ番のお願い -->
-    <table width="300" cellpadding="5" cellspacing="0">
+    <!-- 全体を囲むテーブル（幅780px固定が当時の主流） -->
+    <table class="main-table" width="780" cellpadding="0" cellspacing="0" border="0">
+        <!-- ヘッダー -->
         <tr>
-            <td align="center" bgcolor="#000080">
-                <font color="#ffffff" size="2"><b>სტუმრების რაოდენობა</b></font>
-            </td>
-        </tr>
-        <tr>
-            <td align="center">
-                <span class="counter">0001594</span><br>
-                <font size="1" color="#ffffff">
-                    ※ გთხოვთ, თუ შეხვალთ <span class="kiri-ban">#16000</span>-ზე, დატოვოთ შეტყობინება BBS-ზე!
-                </font>
-            </td>
-        </tr>
-    </table>
-
-    <br>
-    <hr class="rainbow-line">
-
-    <!-- メインの2カラム風テーブル配置（当時の主流レイアウト） -->
-    <table width="750" border="0" cellpadding="10" cellspacing="0">
-        <tr>
-            <!-- 左メニュー -->
-            <td width="200" valign="top" bgcolor="#151515">
-                <font size="3" color="#ffff00"><b>მენიუ (Menu)</b></font><br><br>
-                ・<a href="#about">მთავარი (ჩვენს შესახებ)</a><br>
-                ・<a href="#history">ისტორია (History)</a><br>
-                ・<a href="#bbs">ფორუმი (BBS)</a><br>
-                ・<a href="#links">ბმულები (Links)</a><br>
-                <br>
-                <hr color="#00ff00">
-                <font size="1" color="#888888">
-                    საიტი ოპტიმიზებულია Internet Explorer 6.0-ისთვის.<br>
-                    რეზოლუცია: 800x600.
-                </font>
-            </td>
-
-            <!-- 右メインコンテンツ -->
-            <td width="550" valign="top">
-                <!-- 国家紹介 -->
-                <a name="about"></a>
-                <table width="100%" cellspacing="0">
+            <td colspan="2" class="header-bg">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tr>
-                        <th>სუვერენული სახელმწიფო პრიკოსმი</th>
+                        <td>
+                            <font size="5"><b>პრიკოსმის დამოუკიდებელი სახელმწიფო</b></font><br>
+                            <font size="1" color="#cccccc">პრიკოსმის მთავრობის ოფიციალური საინფორმაციო პორტალი</font>
+                        </td>
+                        <td align="right" valign="bottom">
+                            <font size="1" color="#ffffff">ენა: <b>ქართული</b> | English | 日本語</font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- 動くテキスト（当時はこれがお知らせの定番でした） -->
+        <tr bgcolor="#ffffe1">
+            <td colspan="2" style="border-bottom: 1px solid #999999; padding: 3px;">
+                <marquee scrollamount="2" scrolldelay="50">
+                    <font size="2" color="#ff0000"><b>【მნიშვნელოვანი】</b></font>
+                    <font size="2" color="#000000">პრიკოსმის დამოუკიდებელი სახელმწიფო მიესალმება ყველა საერთაშორისო პარტნიორს!</font>
+                </marquee>
+            </td>
+        </tr>
+
+        <!-- メインコンテンツエリア -->
+        <tr>
+            <!-- 左側：メニュー（幅180px） -->
+            <td class="menu-bg" width="180">
+                <font size="2"><b>მთავარი მენიუ</b></font>
+                <hr size="1" color="#999999">
+                
+                <table width="100%" border="0" cellpadding="3" cellspacing="0">
+                    <tr><td>・<a href="#about">სახელმწიფო</a></td></tr>
+                    <tr><td>・<a href="#history">ისტორია</a></td></tr>
+                    <tr><td>・<a href="#goverment">მთავრობა</a></td></tr>
+                    <tr><td>・<a href="#bbs">სტუმრების წიგნი</a></td></tr>
+                </table>
+                
+                <br><br>
+
+                <!-- アクセスカウンター -->
+                <table width="100%" border="1" cellpadding="3" cellspacing="0" bordercolor="#004080" bgcolor="#ffffff">
+                    <tr bgcolor="#004080">
+                        <td align="center"><font size="1" color="#ffffff"><b>თქვენ ხართ სტუმარი</b></font></td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <span class="counter-img">002594</span>
+                        </td>
+                    </tr>
+                </table>
+
+                <br><br>
+                <!-- 動作環境 -->
+                <font size="1" color="#666666">
+                    რეკომენდებული რეზოლუცია<br>
+                    800x600 ან მეტი<br>
+                    Internet Explorer 5.5+
+                </font>
+            </td>
+
+            <!-- 右側：本文（幅600px） -->
+            <td width="600" valign="top" style="padding: 15px;">
+                
+                <!-- 新着情報 -->
+                <div class="info-box">
+                    <font size="2" color="#004080"><b>განახლების ინფორმაცია (სიახლეები)</b></font>
+                    <hr size="1" color="#004080">
+                    <font size="2">
+                        ・2006/07/16 <span class="new-mark">NEW!</span> ოფიციალური საიტი გაიხსნა.<br>
+                        ・2006/07/10 საერთაშორისო დიპლომატიური ურთიერთობები დამყარდა.
+                    </font>
+                </div>
+
+                <br>
+
+                <!-- 国家概要 -->
+                <a name="about"></a>
+                <table width="100%" border="1" cellpadding="5" cellspacing="0" bordercolor="#999999">
+                    <tr bgcolor="#e6f2ff">
+                        <td><font size="3" color="#004080"><b>ზოგადი ინფორმაცია (სახელმწიფო)</b></font></td>
                     </tr>
                     <tr>
                         <td>
-                            <font color="#ff00ff"><b>● სახელმწიფო იდეა ●</b></font><br>
-                            ჩვენი ქვეყანა არის სრულუფლებიანი სუვერენული რესპუბლიკა. ჩვენი მიზანია დავიცვათ წესრიგი, თავისუფლება და განვავითაროთ ჩვენი საკუთარი კულტურა და ტექნოლოგია.<br><br>
-                            <font color="#ff00ff"><b>● სახელმწიფო ენა ●</b></font><br>
-                            ოფიციალური სახელმწიფო ენა არის გულსიური ენა (ქართული). ყველა დოკუმენტი იწერება ამ ენაზე.
+                            <font size="2">
+                                პრიკოსმის დამოუკიდებელი სახელმწიფო არის სუვერენული ერთეული, რომელიც აღიარებულია საერთაშორისო თანამეგობრობის მიერ.<br><br>
+                                ჩვენი მიზანია მშვიდობის, წესრიგისა და კულტურული განვითარების უზრუნველყოფა.
+                            </font>
                         </td>
                     </tr>
                 </table>
@@ -151,68 +178,55 @@
 
                 <!-- 歴史 -->
                 <a name="history"></a>
-                <table width="100%" cellspacing="0">
-                    <tr>
-                        <th>სახელმწიფოს ისტორია</th>
+                <table width="100%" border="1" cellpadding="5" cellspacing="0" bordercolor="#999999">
+                    <tr bgcolor="#e6f2ff">
+                        <td><font size="3" color="#004080"><b>სახელმწიფოს ისტორია და განვითარება</b></font></td>
                     </tr>
                     <tr>
                         <td>
-                            დიდი ძალისხმევისა და მოსამზადებელი პერიოდის შემდეგ, ჩვენმა ქვეყანამ მოიპოვა საერთაშორისო აღიარება. ეს საიტი შეიქმნა იმისათვის, რომ მსოფლიოს გავაცნოთ ჩვენი იდენტობა.
+                            <font size="2">
+                                ქვეყანამ გაიარა ხანგრძლივი გზა დამოუკიდებლობის მოპოვებამდე. მრავალმხრივი მოლაპარაკებების შედეგად, ჩვენ მივაღწიეთ სრულ სუვერენიტეტს და საერთაშორისო სტატუსის აღიარებას.
+                            </font>
                         </td>
                     </tr>
                 </table>
 
                 <br>
 
-                <!-- 掲示板エリア（モック） -->
-                <a name="bbs"></a>
-                <table width="100%" cellspacing="0">
-                    <tr>
-                        <th>სტუმრების წიგნი (BBS)</th>
+                <!-- 政府情報（テーブル構成） -->
+                <a name="goverment"></a>
+                <table width="100%" border="1" cellpadding="5" cellspacing="0" bordercolor="#999999">
+                    <tr bgcolor="#e6f2ff">
+                        <td colspan="2"><font size="2" color="#004080"><b>ძირითადი მონაცემები</b></font></td>
                     </tr>
                     <tr>
-                        <td>
-                            აქ შეგიძლიათ დატოვოთ თქვენი აზრი ჩვენი ქვეყნის შესახებ!<br>
-                            <u>[დაწერე შეტყობინება]</u> (მშენებლობის პროცესშია...)
-                        </td>
+                        <td width="150" bgcolor="#f5f5f5"><font size="2">ოფიციალური სახელი</font></td>
+                        <td><font size="2">პრიკოსმის დამოუკიდებელი სახელმწიფო</font></td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#f5f5f5"><font size="2">სახელმწიფო ენა</font></td>
+                        <td><font size="2">გულსიური ენა (ქართული)</font></td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#f5f5f5"><font size="2">დედაქალაქი</font></td>
+                        <td><font size="2">ცენტრალური ოლქი</font></td>
                     </tr>
                 </table>
+
+            </td>
+        </tr>
+
+        <!-- フッター -->
+        <tr bgcolor="#e6f2ff">
+            <td colspan="2" align="center" style="border-top: 1px solid #999999; padding: 10px;">
+                <!-- 著作権表示と当時のお決まり文句 -->
+                <font size="1" color="#666666">
+                    Copyright (C) 2000-2006 პრიკოსმის დამოუკიდებელი სახელმწიფო. ყველა უფლება დაცულია.<br>
+                    ამ საიტზე არსებული ინფორმაციის უნებართვო კოპირება აკრძალულია.
+                </font>
             </td>
         </tr>
     </table>
-
-    <br>
-    <hr class="rainbow-line">
-
-    <!-- バナーエリア -->
-    <font size="2"><b>ბანერები (Links)</b></font><br>
-    <table border="0" cellpadding="5">
-        <tr>
-            <td>
-                <!-- 当時定番だった 88x31 サイズの相互リンク用バナー（枠線を蛍光グリーンで再現） -->
-                <div style="width:88px; height:31px; border:1px solid #00ff00; background:#000000; font-size:9px; text-align:center; line-height:31px;">
-                    <font color="#00ff00">PRICOSM Govt</font>
-                </div>
-            </td>
-            <td>
-                <div style="width:88px; height:31px; border:1px solid #00ff00; background:#000000; font-size:9px; text-align:center; line-height:31px;">
-                    <font color="#00ff00">BBS LINK</font>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <font size="1" color="#ffffff">※ ჩვენი საიტის ბანერი შეგიძლიათ თავისუფლად გამოიყენოთ (Direct Link-ი აკრძალულია!).</font>
-
-    <br><br>
-    <hr color="#00ff00" width="500">
-    <br>
-
-    <!-- フッター -->
-    <font size="1" color="#888888">
-        Copyright (C) 2000-2006 პრიკოსმის დამოუკიდებელი სახელმწიფო. All Rights Reserved.<br>
-        საიტის შექმნის თარიღი: 2006/07/16
-    </font>
-
 </center>
 
 </body>

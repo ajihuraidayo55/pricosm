@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>პრიკოსმის დამოუკიდებელი სახელმწიფო - ოფიციალური საიტი (index.html)</title>
+    <style>
+        /* 2000年代のお役所スタイル共通設定 */
+        body {
+            background-color: #f3f3f3;
+            color: #333333;
+            font-family: "MS PGothic", "MS Sans Serif", sans-serif;
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        a {
+            color: #0033cc;
+            text-decoration: underline;
+        }
+        a:visited {
+            color: #551a8b;
+        }
+        a:hover {
+            color: #ff0000;
+        }
+
+        /* 780px固定幅テーブル */
+        .wrapper-table {
+            background-color: #ffffff;
+            border: 1px solid #999999;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 役所らしい濃紺のヘッダー */
+        .header-bg {
+            background-color: #004080;
+            color: #ffffff;
+            padding: 15px;
+        }
+
+        /* グローバルナビゲーション */
+        .g-nav {
+            background-color: #e2eaf2;
+            border-bottom: 1px solid #999999;
+            padding: 5px 10px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        /* お知らせ流れる文字 */
+        .marquee-bar {
+            background-color: #ffffe1;
+            border-bottom: 1px solid #999999;
+            padding: 3px 10px;
+        }
+
+        /* 左メニューカラム */
+        .left-column {
+            background-color: #f7f9fa;
+            border-right: 1px solid #999999;
+            vertical-align: top;
+            padding: 12px;
+            width: 190px;
+        }
+
+        .menu-title {
+            background-color: #e2eaf2;
+            color: #003366;
+            font-weight: bold;
+            padding: 4px;
+            border-left: 5px solid #004080;
+            margin-bottom: 8px;
+        }
+
+        .menu-list {
+            list-style-type: none;
+            padding-left: 5px;
+            margin: 0 0 15px 0;
+        }
+
+        .menu-list li {
+            padding: 3px 0;
+            border-bottom: 1px dotted #cccccc;
+        }
+
+        /* 右メインコンテンツ */
+        .main-column {
+            vertical-align: top;
+            padding: 15px 20px;
+        }
+
+        .info-box {
+            border: 1px solid #004080;
+            background-color: #f0f8ff;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+
+        .content-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+
+        .content-table th {
+            background-color: #e2eaf2;
+            color: #004080;
+            border: 1px solid #999999;
+            padding: 6px;
+            text-align: left;
+        }
+
+        .content-table td {
+            border: 1px solid #999999;
+            padding: 8px;
+        }
+
+        /* 緑色液晶風カウンター */
+        .counter-box {
+            background-color: #000000;
+            color: #33ff33;
+            font-family: monospace;
+            font-size: 14px;
+            padding: 2px 5px;
+            border: 1px solid #808080;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<center>
+    <table class="wrapper-table" width="780" cellpadding="0" cellspacing="0" border="0">
+        <!-- ヘッダー -->
+        <tr>
+            <td colspan="2" class="header-bg">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <font size="5"><b>პრიკოსმის დამოუკიდებელი სახელმწიფო</b></font><br>
+                            <font size="1" color="#cccccc">ოფიციალური სამთავრობო პორტალი (index.html)</font>
+                        </td>
+                        <td align="right" valign="bottom">
+                            <font size="1" color="#ffffff">ენა: <b>ქართული</b> | English | 日本語</font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- グローバルナビ -->
+        <tr>
+            <td colspan="2" class="g-nav">
+                <a href="index.html">მთავარი გვერდი</a> | 
+                <a href="pref.html">ადმინისტრაციული დაყოფა (pref.html)</a> | 
+                <a href="#about">ზოგადი ინფორმაცია</a>
+            </td>
+        </tr>
+
+        <!-- マーキー（流れるニュース） -->
+        <tr>
+            <td colspan="2" class="marquee-bar">
+                <marquee scrollamount="2">
+                    <font size="2" color="#ff0000"><b>【სიახლე】</b></font>
+                    <font size="2">პრიკოსმის დამოუკიდებელი სახელმწიფო მიესალმება ყველა საერთაშორისო ვიზიტორს!</font>
+                </marquee>
+            </td>
+        </tr>
+
+        <!-- メインエリア -->
+        <tr>
+            <!-- 左メニュー -->
+            <td class="left-column">
+                <div class="menu-title">მთავარი მენიუ</div>
+                <ul class="menu-list">
+                    <li><a href="index.html">მთავარი გვერდი</a></li>
+                    <li><a href="#about">ქვეყნის შესახებ</a></li>
+                    <li><a href="#history">სახელმწიფოს ისტორია</a></li>
+                </ul>
+
+                <div class="menu-title">ადმინისტრაცია</div>
+                <ul class="menu-list">
+                    <li><a href="pref.html"><b>ცენტრალური ოლქი (pref.html)</b></a></li>
+                </ul>
+
+                <!-- カウンター -->
+                <table width="100%" border="1" cellpadding="3" cellspacing="0" bordercolor="#004080" bgcolor="#ffffff">
+                    <tr bgcolor="#004080">
+                        <td align="center"><font size="1" color="#ffffff"><b>სტუმრების რაოდენობა</b></font></td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <span class="counter-box">002594</span>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+                <font size="1" color="#666666">
+                    Internet Explorer 5.5+<br>
+                    რეზოლუცია: 800x600
+                </font>
+            </td>
+
+            <!-- 右コンテンツ -->
+            <td class="main-column">
+                <!-- 新着情報 -->
+                <div class="info-box">
+                    <font size="2" color="#004080"><b>უახლესი ინფორმაცია</b></font>
+                    <hr size="1" color="#004080">
+                    <font size="2">
+                        ・2006/07/16 <font color="#ff0000"><b>NEW!</b></font> მთავარი სამთავრობო პორტალი გაიხსნა.<br>
+                        ・2006/07/10 გაეროსა და საერთაშორისო აღიარების პროცესი წარმატებით დასრულდა.
+                    </font>
+                </div>
+
+                <!-- 国家概要 -->
+                <a name="about"></a>
+                <table class="content-table">
+                    <tr>
+                        <th>სახელმწიფო იდეა და სუვერენიტეტი</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            პრიკოსმის დამოუკიდებელი სახელმწიფო არის სრულუფლებიანი სუვერენული ერთეული, რომელიც აღიარებულია საერთაშორისო თანამეგობრობის მიერ. ჩვენი სახელმწიფო ორიენტირებულია მშვიდობის, წესრიგისა და კულტურული განვითარების უზრუნველყოფაზე.
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- 歴史 -->
+                <a name="history"></a>
+                <table class="content-table">
+                    <tr>
+                        <th>დაარსების ისტორია</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            ჩვენმა ქვეყანამ გაიარა განვითარებისა და მოლაპარაკებების ხანგრძლივი ეტაპი, სანამ მოიპოვებდა სრულ სუვერენიტეტს. დღეს ჩვენ ვამაყობთ ჩვენი დამოუკიდებელი სტატუსით და აქტიურად ვთანამშრომლობთ მსოფლიოს წამყვან სახელმწიფოებთან.
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- フッター -->
+        <tr bgcolor="#e2eaf2">
+            <td colspan="2" align="center" style="border-top: 1px solid #999999; padding: 10px;">
+                <font size="1" color="#666666">
+                    Copyright (C) 2000-2006 პრიკოსმის დამოუკიდებელი სახელმწიფო. ყველა უფლება დაცულია.
+                </font>
+            </td>
+        </tr>
+    </table>
+</center>
+
+</body>
+</html>

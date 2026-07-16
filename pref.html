@@ -2,9 +2,9 @@
 <html lang="ka">
 <head>
     <meta charset="UTF-8">
-    <title>პრიკოსმის დამოუკიდებელი სახელმწიფო - ოფიციალური საიტი (index.html)</title>
+    <title>პრიკოსმის ცენტრალური ოლქი - სამთავრობო ბიულეტენი (pref.html)</title>
     <style>
-        /* 2000年代のお役所スタイル共通設定 */
+        /* index.htmlと完全に統一された2000年代スタイル */
         body {
             background-color: #f3f3f3;
             color: #333333;
@@ -26,7 +26,6 @@
             color: #ff0000;
         }
 
-        /* 780px固定幅テーブル */
         .wrapper-table {
             background-color: #ffffff;
             border: 1px solid #999999;
@@ -34,14 +33,12 @@
             margin-bottom: 20px;
         }
 
-        /* 役所らしい濃紺のヘッダー */
         .header-bg {
             background-color: #004080;
             color: #ffffff;
             padding: 15px;
         }
 
-        /* グローバルナビゲーション */
         .g-nav {
             background-color: #e2eaf2;
             border-bottom: 1px solid #999999;
@@ -50,14 +47,13 @@
             font-weight: bold;
         }
 
-        /* お知らせ流れる文字 */
-        .marquee-bar {
-            background-color: #ffffe1;
+        .alert-bar {
+            background-color: #ffffcc;
             border-bottom: 1px solid #999999;
             padding: 3px 10px;
+            font-size: 11px;
         }
 
-        /* 左メニューカラム */
         .left-column {
             background-color: #f7f9fa;
             border-right: 1px solid #999999;
@@ -86,39 +82,51 @@
             border-bottom: 1px dotted #cccccc;
         }
 
-        /* 右メインコンテンツ */
         .main-column {
             vertical-align: top;
             padding: 15px 20px;
         }
 
-        .info-box {
-            border: 1px solid #004080;
-            background-color: #f0f8ff;
-            padding: 8px;
+        .content-section {
+            border: 1px solid #cccccc;
             margin-bottom: 15px;
         }
 
-        .content-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 15px;
-        }
-
-        .content-table th {
+        .section-header {
             background-color: #e2eaf2;
             color: #004080;
-            border: 1px solid #999999;
+            font-weight: bold;
+            padding: 6px 10px;
+            font-size: 13px;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        .section-body {
+            padding: 10px;
+            font-size: 12px;
+        }
+
+        /* 行政データ用テーブル */
+        .pref-data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            border: 1px solid #cccccc;
+        }
+
+        .pref-data-table th {
+            background-color: #f2f2f2;
+            border: 1px solid #cccccc;
             padding: 6px;
             text-align: left;
+            width: 35%;
         }
 
-        .content-table td {
-            border: 1px solid #999999;
-            padding: 8px;
+        .pref-data-table td {
+            border: 1px solid #cccccc;
+            padding: 6px;
         }
 
-        /* 緑色液晶風カウンター */
         .counter-box {
             background-color: #000000;
             color: #33ff33;
@@ -136,15 +144,15 @@
     <table class="wrapper-table" width="780" cellpadding="0" cellspacing="0" border="0">
         <!-- ヘッダー -->
         <tr>
-            <td colspan="2" class="header-bg">
+            <td colspan="2" class="header-top" style="background-color: #ffffff; border-bottom: 3px double #004080; padding: 10px 15px;">
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                         <td>
-                            <font size="5"><b>პრიკოსმის დამოუკიდებელი სახელმწიფო</b></font><br>
-                            <font size="1" color="#cccccc">ოფიციალური სამთავრობო პორტალი (index.html)</font>
+                            <font size="4" color="#004080"><b>პრიკოსმის დამოუკიდებელი სახელმწიფო</b></font><br>
+                            <font size="2" color="#666666"><b>ცენტრალური ადმინისტრაციული ოლქი (pref.html)</b></font>
                         </td>
                         <td align="right" valign="bottom">
-                            <font size="1" color="#ffffff">ენა: <b>ქართული</b> | English | 日本語</font>
+                            <font size="1"><a href="index.html">მთავარი პორტალი (index.html)</a></font>
                         </td>
                     </tr>
                 </table>
@@ -154,19 +162,16 @@
         <!-- グローバルナビ -->
         <tr>
             <td colspan="2" class="g-nav">
-                <a href="index.html">მთავარი გვერდი</a> | 
-                <a href="pref.html">ადმინისტრაციული დაყოფა (pref.html)</a> | 
-                <a href="#about">ზოგადი ინფორმაცია</a>
+                <a href="index.html">მთავარი გვერდი (index.html)</a> | 
+                <a href="pref.html">ადმინისტრაციული დაყოფა</a> | 
+                <a href="#stats">საოლქო სტატისტიკა</a>
             </td>
         </tr>
 
-        <!-- マーキー（流れるニュース） -->
+        <!-- 黄色背景の告知バー -->
         <tr>
-            <td colspan="2" class="marquee-bar">
-                <marquee scrollamount="2">
-                    <font size="2" color="#ff0000"><b>【სიახლე】</b></font>
-                    <font size="2">პრიკოსმის დამოუკიდებელი სახელმწიფო მიესალმება ყველა საერთაშორისო ვიზიტორს!</font>
-                </marquee>
+            <td colspan="2" class="alert-bar">
+                <b>[ადმინისტრაციული განცხადება]</b> მიმდინარეობს მოსახლეობის ახალი აღწერის მონაცემების დამუშავება.
             </td>
         </tr>
 
@@ -174,16 +179,11 @@
         <tr>
             <!-- 左メニュー -->
             <td class="left-column">
-                <div class="menu-title">მთავარი მენიუ</div>
+                <div class="menu-title">ოლქის მენიუ</div>
                 <ul class="menu-list">
-                    <li><a href="index.html">მთავარი გვერდი</a></li>
-                    <li><a href="#about">ქვეყნის შესახებ</a></li>
-                    <li><a href="#history">სახელმწიფოს ისტორია</a></li>
-                </ul>
-
-                <div class="menu-title">ადმინისტრაცია</div>
-                <ul class="menu-list">
-                    <li><a href="pref.html"><b>ცენტრალური ოლქი (pref.html)</b></a></li>
+                    <li><a href="index.html">მთავარი პორტალი</a></li>
+                    <li><a href="#stats">საოლქო სტატისტიკა</a></li>
+                    <li><a href="#decree">სამთავრობო დეკრეტი</a></li>
                 </ul>
 
                 <!-- カウンター -->
@@ -193,55 +193,64 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            <span class="counter-box">002594</span>
+                            <span class="counter-box">0004812</span>
                         </td>
                     </tr>
                 </table>
 
                 <br>
                 <font size="1" color="#666666">
-                    Internet Explorer 5.5+<br>
-                    რეზოლუცია: 800x600
+                    ※ გთხოვთ შეატყობინოთ ადმინისტრატორს კირბანის (#5000) შემთხვევაში!
                 </font>
             </td>
 
             <!-- 右コンテンツ -->
             <td class="main-column">
-                <!-- 新着情報 -->
-                <div class="info-box">
-                    <font size="2" color="#004080"><b>უახლესი ინფორმაცია</b></font>
-                    <hr size="1" color="#004080">
-                    <font size="2">
-                        ・2006/07/16 <font color="#ff0000"><b>NEW!</b></font> მთავარი სამთავრობო პორტალი გაიხსნა.<br>
-                        ・2006/07/10 გაეროსა და საერთაშორისო აღიარების პროცესი წარმატებით დასრულდა.
-                    </font>
+                
+                <!-- 統計セクション -->
+                <a name="stats"></a>
+                <div class="content-section">
+                    <div class="section-header">ცენტრალური ადმინისტრაციული ოლქის მონაცემები</div>
+                    <div class="section-body">
+                        <p>წინამდებარე დოკუმენტი შეიცავს პრიკოსმის დამოუკიდებელი სახელმწიფოს მთავარი ადმინისტრაციული ერთეულის ოფიციალურ სტატისტიკას.</p>
+                        
+                        <table class="pref-data-table">
+                            <tr>
+                                <th>ოლქის ოფიციალური სახელი</th>
+                                <td>პრიკოსმის ცენტრალური ადმინისტრაციული ოლქი</td>
+                            </tr>
+                            <tr>
+                                <th>ადმინისტრაციული ცენტრი</th>
+                                <td>დედაქალაქის რაიონი (სამთავრობო კვარტალი)</td>
+                            </tr>
+                            <tr>
+                                <th>ფართობი</th>
+                                <td>სპეციალური იურისდიქციის ზონა</td>
+                            </tr>
+                            <tr>
+                                <th>მმართველობის ფორმა</th>
+                                <td>საოლქო ადმინისტრაციული საბჭო</td>
+                            </tr>
+                            <tr>
+                                <th>ოფიციალური კოდი</th>
+                                <td>PRC-01-PREF</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
 
-                <!-- 国家概要 -->
-                <a name="about"></a>
-                <table class="content-table">
-                    <tr>
-                        <th>სახელმწიფო იდეა და სუვერენიტეტი</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            პრიკოსმის დამოუკიდებელი სახელმწიფო არის სრულუფლებიანი სუვერენული ერთეული, რომელიც აღიარებულია საერთაშორისო თანამეგობრობის მიერ. ჩვენი სახელმწიფო ორიენტირებულია მშვიდობის, წესრიგისა და კულტურული განვითარების უზრუნველყოფაზე.
-                        </td>
-                    </tr>
-                </table>
+                <!-- 閣僚令/布告セクション -->
+                <a name="decree"></a>
+                <div class="content-section">
+                    <div class="section-header">სამთავრობო ბიულეტენი და დეკრეტი</div>
+                    <div class="section-body">
+                        <p><b>დეკრეტი №12-A: საოლქო უსაფრთხოების წესები</b></p>
+                        <p style="text-indent: 10px; font-size: 11px; color: #444444;">
+                            უზენაესი საბჭოს გადაწყვეტილებით, ცენტრალური ოლქის ყველა უწყება ვალდებულია უზრუნველყოს საინფორმაციო ქსელების გამართული მუშაობა და დაიცვას მოქალაქეთა უსაფრთხოება.
+                        </p>
+                    </div>
+                </div>
 
-                <!-- 歴史 -->
-                <a name="history"></a>
-                <table class="content-table">
-                    <tr>
-                        <th>დაარსების ისტორია</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            ჩვენმა ქვეყანამ გაიარა განვითარებისა და მოლაპარაკებების ხანგრძლივი ეტაპი, სანამ მოიპოვებდა სრულ სუვერენიტეტს. დღეს ჩვენ ვამაყობთ ჩვენი დამოუკიდებელი სტატუსით და აქტიურად ვთანამშრომლობთ მსოფლიოს წამყვან სახელმწიფოებთან.
-                        </td>
-                    </tr>
-                </table>
             </td>
         </tr>
 
